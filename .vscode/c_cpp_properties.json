@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/local/include/ompl-1.6",
+                "/usr/include/eigen3",
+                "${workspaceFolder}/**",
+                "/opt/ros/foxy/include/**",
+                "/usr/include/eigen3",
+                "/usr/include/opencv4",
+                "/opt/ros/foxy/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
