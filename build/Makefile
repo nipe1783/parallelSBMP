@@ -117,41 +117,235 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named vectorAdd
+# Target rules for targets named parallelSBMP_lib
 
 # Build rule for target.
-vectorAdd: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vectorAdd
-.PHONY : vectorAdd
+parallelSBMP_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 parallelSBMP_lib
+.PHONY : parallelSBMP_lib
 
 # fast build rule for target.
-vectorAdd/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/build
-.PHONY : vectorAdd/fast
+parallelSBMP_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/build
+.PHONY : parallelSBMP_lib/fast
 
-vectorAdd.o: vectorAdd.cu.o
-.PHONY : vectorAdd.o
+#=============================================================================
+# Target rules for targets named GPU_demo1
+
+# Build rule for target.
+GPU_demo1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GPU_demo1
+.PHONY : GPU_demo1
+
+# fast build rule for target.
+GPU_demo1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/build
+.PHONY : GPU_demo1/fast
+
+#=============================================================================
+# Target rules for targets named CPU_demo1
+
+# Build rule for target.
+CPU_demo1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CPU_demo1
+.PHONY : CPU_demo1
+
+# fast build rule for target.
+CPU_demo1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/build
+.PHONY : CPU_demo1/fast
+
+demos/CPU_demo1.o: demos/CPU_demo1.cpp.o
+.PHONY : demos/CPU_demo1.o
 
 # target to build an object file
-vectorAdd.cu.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/vectorAdd.cu.o
-.PHONY : vectorAdd.cu.o
+demos/CPU_demo1.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/demos/CPU_demo1.cpp.o
+.PHONY : demos/CPU_demo1.cpp.o
 
-vectorAdd.i: vectorAdd.cu.i
-.PHONY : vectorAdd.i
+demos/CPU_demo1.i: demos/CPU_demo1.cpp.i
+.PHONY : demos/CPU_demo1.i
 
 # target to preprocess a source file
-vectorAdd.cu.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/vectorAdd.cu.i
-.PHONY : vectorAdd.cu.i
+demos/CPU_demo1.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/demos/CPU_demo1.cpp.i
+.PHONY : demos/CPU_demo1.cpp.i
 
-vectorAdd.s: vectorAdd.cu.s
-.PHONY : vectorAdd.s
+demos/CPU_demo1.s: demos/CPU_demo1.cpp.s
+.PHONY : demos/CPU_demo1.s
 
 # target to generate assembly for a file
-vectorAdd.cu.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/vectorAdd.cu.s
-.PHONY : vectorAdd.cu.s
+demos/CPU_demo1.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/demos/CPU_demo1.cpp.s
+.PHONY : demos/CPU_demo1.cpp.s
+
+demos/demo1.o: demos/demo1.cu.o
+.PHONY : demos/demo1.o
+
+# target to build an object file
+demos/demo1.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/demos/demo1.cu.o
+.PHONY : demos/demo1.cu.o
+
+demos/demo1.i: demos/demo1.cu.i
+.PHONY : demos/demo1.i
+
+# target to preprocess a source file
+demos/demo1.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/demos/demo1.cu.i
+.PHONY : demos/demo1.cu.i
+
+demos/demo1.s: demos/demo1.cu.s
+.PHONY : demos/demo1.s
+
+# target to generate assembly for a file
+demos/demo1.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/demos/demo1.cu.s
+.PHONY : demos/demo1.cu.s
+
+src/agent/Agent.o: src/agent/Agent.cpp.o
+.PHONY : src/agent/Agent.o
+
+# target to build an object file
+src/agent/Agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/agent/Agent.cpp.o
+.PHONY : src/agent/Agent.cpp.o
+
+src/agent/Agent.i: src/agent/Agent.cpp.i
+.PHONY : src/agent/Agent.i
+
+# target to preprocess a source file
+src/agent/Agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/agent/Agent.cpp.i
+.PHONY : src/agent/Agent.cpp.i
+
+src/agent/Agent.s: src/agent/Agent.cpp.s
+.PHONY : src/agent/Agent.s
+
+# target to generate assembly for a file
+src/agent/Agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/agent/Agent.cpp.s
+.PHONY : src/agent/Agent.cpp.s
+
+src/obstacle/Obstacle.o: src/obstacle/Obstacle.cpp.o
+.PHONY : src/obstacle/Obstacle.o
+
+# target to build an object file
+src/obstacle/Obstacle.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/obstacle/Obstacle.cpp.o
+.PHONY : src/obstacle/Obstacle.cpp.o
+
+src/obstacle/Obstacle.i: src/obstacle/Obstacle.cpp.i
+.PHONY : src/obstacle/Obstacle.i
+
+# target to preprocess a source file
+src/obstacle/Obstacle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/obstacle/Obstacle.cpp.i
+.PHONY : src/obstacle/Obstacle.cpp.i
+
+src/obstacle/Obstacle.s: src/obstacle/Obstacle.cpp.s
+.PHONY : src/obstacle/Obstacle.s
+
+# target to generate assembly for a file
+src/obstacle/Obstacle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/obstacle/Obstacle.cpp.s
+.PHONY : src/obstacle/Obstacle.cpp.s
+
+src/planners/Planner.o: src/planners/Planner.cu.o
+.PHONY : src/planners/Planner.o
+
+# target to build an object file
+src/planners/Planner.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner.cu.o
+.PHONY : src/planners/Planner.cu.o
+
+src/planners/Planner.i: src/planners/Planner.cu.i
+.PHONY : src/planners/Planner.i
+
+# target to preprocess a source file
+src/planners/Planner.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner.cu.i
+.PHONY : src/planners/Planner.cu.i
+
+src/planners/Planner.s: src/planners/Planner.cu.s
+.PHONY : src/planners/Planner.s
+
+# target to generate assembly for a file
+src/planners/Planner.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner.cu.s
+.PHONY : src/planners/Planner.cu.s
+
+src/planners/PlannerCPU.o: src/planners/PlannerCPU.cpp.o
+.PHONY : src/planners/PlannerCPU.o
+
+# target to build an object file
+src/planners/PlannerCPU.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.o
+.PHONY : src/planners/PlannerCPU.cpp.o
+
+src/planners/PlannerCPU.i: src/planners/PlannerCPU.cpp.i
+.PHONY : src/planners/PlannerCPU.i
+
+# target to preprocess a source file
+src/planners/PlannerCPU.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.i
+.PHONY : src/planners/PlannerCPU.cpp.i
+
+src/planners/PlannerCPU.s: src/planners/PlannerCPU.cpp.s
+.PHONY : src/planners/PlannerCPU.s
+
+# target to generate assembly for a file
+src/planners/PlannerCPU.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.s
+.PHONY : src/planners/PlannerCPU.cpp.s
+
+src/planners/RRT.o: src/planners/RRT.cu.o
+.PHONY : src/planners/RRT.o
+
+# target to build an object file
+src/planners/RRT.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/RRT.cu.o
+.PHONY : src/planners/RRT.cu.o
+
+src/planners/RRT.i: src/planners/RRT.cu.i
+.PHONY : src/planners/RRT.i
+
+# target to preprocess a source file
+src/planners/RRT.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/RRT.cu.i
+.PHONY : src/planners/RRT.cu.i
+
+src/planners/RRT.s: src/planners/RRT.cu.s
+.PHONY : src/planners/RRT.s
+
+# target to generate assembly for a file
+src/planners/RRT.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/RRT.cu.s
+.PHONY : src/planners/RRT.cu.s
+
+src/workspace/Workspace.o: src/workspace/Workspace.cpp.o
+.PHONY : src/workspace/Workspace.o
+
+# target to build an object file
+src/workspace/Workspace.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/workspace/Workspace.cpp.o
+.PHONY : src/workspace/Workspace.cpp.o
+
+src/workspace/Workspace.i: src/workspace/Workspace.cpp.i
+.PHONY : src/workspace/Workspace.i
+
+# target to preprocess a source file
+src/workspace/Workspace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/workspace/Workspace.cpp.i
+.PHONY : src/workspace/Workspace.cpp.i
+
+src/workspace/Workspace.s: src/workspace/Workspace.cpp.s
+.PHONY : src/workspace/Workspace.s
+
+# target to generate assembly for a file
+src/workspace/Workspace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/workspace/Workspace.cpp.s
+.PHONY : src/workspace/Workspace.cpp.s
 
 # Help Target
 help:
@@ -161,10 +355,33 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... vectorAdd"
-	@echo "... vectorAdd.o"
-	@echo "... vectorAdd.i"
-	@echo "... vectorAdd.s"
+	@echo "... CPU_demo1"
+	@echo "... GPU_demo1"
+	@echo "... parallelSBMP_lib"
+	@echo "... demos/CPU_demo1.o"
+	@echo "... demos/CPU_demo1.i"
+	@echo "... demos/CPU_demo1.s"
+	@echo "... demos/demo1.o"
+	@echo "... demos/demo1.i"
+	@echo "... demos/demo1.s"
+	@echo "... src/agent/Agent.o"
+	@echo "... src/agent/Agent.i"
+	@echo "... src/agent/Agent.s"
+	@echo "... src/obstacle/Obstacle.o"
+	@echo "... src/obstacle/Obstacle.i"
+	@echo "... src/obstacle/Obstacle.s"
+	@echo "... src/planners/Planner.o"
+	@echo "... src/planners/Planner.i"
+	@echo "... src/planners/Planner.s"
+	@echo "... src/planners/PlannerCPU.o"
+	@echo "... src/planners/PlannerCPU.i"
+	@echo "... src/planners/PlannerCPU.s"
+	@echo "... src/planners/RRT.o"
+	@echo "... src/planners/RRT.i"
+	@echo "... src/planners/RRT.s"
+	@echo "... src/workspace/Workspace.o"
+	@echo "... src/workspace/Workspace.i"
+	@echo "... src/workspace/Workspace.s"
 .PHONY : help
 
 

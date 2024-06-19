@@ -63,7 +63,9 @@ CMAKE_BINARY_DIR = /home/nic/dev/research/parallelSBMP/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/vectorAdd.dir/all
+all: CMakeFiles/parallelSBMP_lib.dir/all
+all: CMakeFiles/GPU_demo1.dir/all
+all: CMakeFiles/CPU_demo1.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +73,88 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/vectorAdd.dir/clean
+clean: CMakeFiles/parallelSBMP_lib.dir/clean
+clean: CMakeFiles/GPU_demo1.dir/clean
+clean: CMakeFiles/CPU_demo1.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/vectorAdd.dir
+# Target rules for target CMakeFiles/parallelSBMP_lib.dir
 
 # All Build rule for target.
-CMakeFiles/vectorAdd.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/nic/dev/research/parallelSBMP/build/CMakeFiles --progress-num=1,2,3 "Built target vectorAdd"
-.PHONY : CMakeFiles/vectorAdd.dir/all
+CMakeFiles/parallelSBMP_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/nic/dev/research/parallelSBMP/build/CMakeFiles --progress-num=6,7,8,9,10,11,12 "Built target parallelSBMP_lib"
+.PHONY : CMakeFiles/parallelSBMP_lib.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/vectorAdd.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vectorAdd.dir/all
+CMakeFiles/parallelSBMP_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/parallelSBMP_lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 0
-.PHONY : CMakeFiles/vectorAdd.dir/rule
+.PHONY : CMakeFiles/parallelSBMP_lib.dir/rule
 
 # Convenience name for target.
-vectorAdd: CMakeFiles/vectorAdd.dir/rule
-.PHONY : vectorAdd
+parallelSBMP_lib: CMakeFiles/parallelSBMP_lib.dir/rule
+.PHONY : parallelSBMP_lib
 
 # clean rule for target.
-CMakeFiles/vectorAdd.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vectorAdd.dir/build.make CMakeFiles/vectorAdd.dir/clean
-.PHONY : CMakeFiles/vectorAdd.dir/clean
+CMakeFiles/parallelSBMP_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/clean
+.PHONY : CMakeFiles/parallelSBMP_lib.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GPU_demo1.dir
+
+# All Build rule for target.
+CMakeFiles/GPU_demo1.dir/all: CMakeFiles/parallelSBMP_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/nic/dev/research/parallelSBMP/build/CMakeFiles --progress-num=3,4,5 "Built target GPU_demo1"
+.PHONY : CMakeFiles/GPU_demo1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GPU_demo1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 10
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GPU_demo1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 0
+.PHONY : CMakeFiles/GPU_demo1.dir/rule
+
+# Convenience name for target.
+GPU_demo1: CMakeFiles/GPU_demo1.dir/rule
+.PHONY : GPU_demo1
+
+# clean rule for target.
+CMakeFiles/GPU_demo1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GPU_demo1.dir/build.make CMakeFiles/GPU_demo1.dir/clean
+.PHONY : CMakeFiles/GPU_demo1.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/CPU_demo1.dir
+
+# All Build rule for target.
+CMakeFiles/CPU_demo1.dir/all: CMakeFiles/parallelSBMP_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/nic/dev/research/parallelSBMP/build/CMakeFiles --progress-num=1,2 "Built target CPU_demo1"
+.PHONY : CMakeFiles/CPU_demo1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CPU_demo1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CPU_demo1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nic/dev/research/parallelSBMP/build/CMakeFiles 0
+.PHONY : CMakeFiles/CPU_demo1.dir/rule
+
+# Convenience name for target.
+CPU_demo1: CMakeFiles/CPU_demo1.dir/rule
+.PHONY : CPU_demo1
+
+# clean rule for target.
+CMakeFiles/CPU_demo1.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CPU_demo1.dir/build.make CMakeFiles/CPU_demo1.dir/clean
+.PHONY : CMakeFiles/CPU_demo1.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

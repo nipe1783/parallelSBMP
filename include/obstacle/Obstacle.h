@@ -8,10 +8,11 @@ class Obstacle {
         // constructor
         Obstacle() = default;
         Obstacle(std::vector<Eigen::Vector2d>& verticesCCW);
+        Obstacle(float x, float y, float length);
 
         // methods
 
         // fields
-        std::vector<Eigen::Vector2d> verticesCCW;
+        std::vector<Eigen::Vector2d> verticesCCW_;
         
 };

@@ -1,3 +1,5 @@
-/home/nic/dev/research/parallelSBMP/build/CMakeFiles/vectorAdd.dir
+/home/nic/dev/research/parallelSBMP/build/CMakeFiles/parallelSBMP_lib.dir
+/home/nic/dev/research/parallelSBMP/build/CMakeFiles/GPU_demo1.dir
+/home/nic/dev/research/parallelSBMP/build/CMakeFiles/CPU_demo1.dir
 /home/nic/dev/research/parallelSBMP/build/CMakeFiles/edit_cache.dir
 /home/nic/dev/research/parallelSBMP/build/CMakeFiles/rebuild_cache.dir
