@@ -8,8 +8,10 @@
 #include "agent/Agent.h"
 
 void RRT::plan(const Workspace& workspace, const Agent& agent, const Eigen::Vector2d& goal){
+    int numSamples = 100;
+    State state(0.0f, 0.0f);
     for (int i = 0; i < 100; i++){
-        std::vector<Eigen::Vector2d> samples = generateRandomSamples();
+        std::vector<State> samples = generateRandomSamples(state, numSamples);
         printf("Number of samples: %d\n", samples.size());
     }
     

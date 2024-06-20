@@ -227,6 +227,30 @@ src/agent/Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/agent/Agent.cpp.s
 .PHONY : src/agent/Agent.cpp.s
 
+src/collisionCheck/CollisionCheck.o: src/collisionCheck/CollisionCheck.cpp.o
+.PHONY : src/collisionCheck/CollisionCheck.o
+
+# target to build an object file
+src/collisionCheck/CollisionCheck.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/collisionCheck/CollisionCheck.cpp.o
+.PHONY : src/collisionCheck/CollisionCheck.cpp.o
+
+src/collisionCheck/CollisionCheck.i: src/collisionCheck/CollisionCheck.cpp.i
+.PHONY : src/collisionCheck/CollisionCheck.i
+
+# target to preprocess a source file
+src/collisionCheck/CollisionCheck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/collisionCheck/CollisionCheck.cpp.i
+.PHONY : src/collisionCheck/CollisionCheck.cpp.i
+
+src/collisionCheck/CollisionCheck.s: src/collisionCheck/CollisionCheck.cpp.s
+.PHONY : src/collisionCheck/CollisionCheck.s
+
+# target to generate assembly for a file
+src/collisionCheck/CollisionCheck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/collisionCheck/CollisionCheck.cpp.s
+.PHONY : src/collisionCheck/CollisionCheck.cpp.s
+
 src/obstacle/Obstacle.o: src/obstacle/Obstacle.cpp.o
 .PHONY : src/obstacle/Obstacle.o
 
@@ -275,29 +299,29 @@ src/planners/Planner.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner.cu.s
 .PHONY : src/planners/Planner.cu.s
 
-src/planners/PlannerCPU.o: src/planners/PlannerCPU.cpp.o
-.PHONY : src/planners/PlannerCPU.o
+src/planners/Planner_CPU.o: src/planners/Planner_CPU.cpp.o
+.PHONY : src/planners/Planner_CPU.o
 
 # target to build an object file
-src/planners/PlannerCPU.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.o
-.PHONY : src/planners/PlannerCPU.cpp.o
+src/planners/Planner_CPU.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner_CPU.cpp.o
+.PHONY : src/planners/Planner_CPU.cpp.o
 
-src/planners/PlannerCPU.i: src/planners/PlannerCPU.cpp.i
-.PHONY : src/planners/PlannerCPU.i
+src/planners/Planner_CPU.i: src/planners/Planner_CPU.cpp.i
+.PHONY : src/planners/Planner_CPU.i
 
 # target to preprocess a source file
-src/planners/PlannerCPU.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.i
-.PHONY : src/planners/PlannerCPU.cpp.i
+src/planners/Planner_CPU.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner_CPU.cpp.i
+.PHONY : src/planners/Planner_CPU.cpp.i
 
-src/planners/PlannerCPU.s: src/planners/PlannerCPU.cpp.s
-.PHONY : src/planners/PlannerCPU.s
+src/planners/Planner_CPU.s: src/planners/Planner_CPU.cpp.s
+.PHONY : src/planners/Planner_CPU.s
 
 # target to generate assembly for a file
-src/planners/PlannerCPU.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/PlannerCPU.cpp.s
-.PHONY : src/planners/PlannerCPU.cpp.s
+src/planners/Planner_CPU.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/Planner_CPU.cpp.s
+.PHONY : src/planners/Planner_CPU.cpp.s
 
 src/planners/RRT.o: src/planners/RRT.cu.o
 .PHONY : src/planners/RRT.o
@@ -322,6 +346,78 @@ src/planners/RRT.s: src/planners/RRT.cu.s
 src/planners/RRT.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/planners/RRT.cu.s
 .PHONY : src/planners/RRT.cu.s
+
+src/state/State.o: src/state/State.cu.o
+.PHONY : src/state/State.o
+
+# target to build an object file
+src/state/State.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/state/State.cu.o
+.PHONY : src/state/State.cu.o
+
+src/state/State.i: src/state/State.cu.i
+.PHONY : src/state/State.i
+
+# target to preprocess a source file
+src/state/State.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/state/State.cu.i
+.PHONY : src/state/State.cu.i
+
+src/state/State.s: src/state/State.cu.s
+.PHONY : src/state/State.s
+
+# target to generate assembly for a file
+src/state/State.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/state/State.cu.s
+.PHONY : src/state/State.cu.s
+
+src/tree/Tree.o: src/tree/Tree.cpp.o
+.PHONY : src/tree/Tree.o
+
+# target to build an object file
+src/tree/Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/tree/Tree.cpp.o
+.PHONY : src/tree/Tree.cpp.o
+
+src/tree/Tree.i: src/tree/Tree.cpp.i
+.PHONY : src/tree/Tree.i
+
+# target to preprocess a source file
+src/tree/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/tree/Tree.cpp.i
+.PHONY : src/tree/Tree.cpp.i
+
+src/tree/Tree.s: src/tree/Tree.cpp.s
+.PHONY : src/tree/Tree.s
+
+# target to generate assembly for a file
+src/tree/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/tree/Tree.cpp.s
+.PHONY : src/tree/Tree.cpp.s
+
+src/treeNode/TreeNode.o: src/treeNode/TreeNode.cpp.o
+.PHONY : src/treeNode/TreeNode.o
+
+# target to build an object file
+src/treeNode/TreeNode.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/treeNode/TreeNode.cpp.o
+.PHONY : src/treeNode/TreeNode.cpp.o
+
+src/treeNode/TreeNode.i: src/treeNode/TreeNode.cpp.i
+.PHONY : src/treeNode/TreeNode.i
+
+# target to preprocess a source file
+src/treeNode/TreeNode.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/treeNode/TreeNode.cpp.i
+.PHONY : src/treeNode/TreeNode.cpp.i
+
+src/treeNode/TreeNode.s: src/treeNode/TreeNode.cpp.s
+.PHONY : src/treeNode/TreeNode.s
+
+# target to generate assembly for a file
+src/treeNode/TreeNode.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/parallelSBMP_lib.dir/build.make CMakeFiles/parallelSBMP_lib.dir/src/treeNode/TreeNode.cpp.s
+.PHONY : src/treeNode/TreeNode.cpp.s
 
 src/workspace/Workspace.o: src/workspace/Workspace.cpp.o
 .PHONY : src/workspace/Workspace.o
@@ -367,18 +463,30 @@ help:
 	@echo "... src/agent/Agent.o"
 	@echo "... src/agent/Agent.i"
 	@echo "... src/agent/Agent.s"
+	@echo "... src/collisionCheck/CollisionCheck.o"
+	@echo "... src/collisionCheck/CollisionCheck.i"
+	@echo "... src/collisionCheck/CollisionCheck.s"
 	@echo "... src/obstacle/Obstacle.o"
 	@echo "... src/obstacle/Obstacle.i"
 	@echo "... src/obstacle/Obstacle.s"
 	@echo "... src/planners/Planner.o"
 	@echo "... src/planners/Planner.i"
 	@echo "... src/planners/Planner.s"
-	@echo "... src/planners/PlannerCPU.o"
-	@echo "... src/planners/PlannerCPU.i"
-	@echo "... src/planners/PlannerCPU.s"
+	@echo "... src/planners/Planner_CPU.o"
+	@echo "... src/planners/Planner_CPU.i"
+	@echo "... src/planners/Planner_CPU.s"
 	@echo "... src/planners/RRT.o"
 	@echo "... src/planners/RRT.i"
 	@echo "... src/planners/RRT.s"
+	@echo "... src/state/State.o"
+	@echo "... src/state/State.i"
+	@echo "... src/state/State.s"
+	@echo "... src/tree/Tree.o"
+	@echo "... src/tree/Tree.i"
+	@echo "... src/tree/Tree.s"
+	@echo "... src/treeNode/TreeNode.o"
+	@echo "... src/treeNode/TreeNode.i"
+	@echo "... src/treeNode/TreeNode.s"
 	@echo "... src/workspace/Workspace.o"
 	@echo "... src/workspace/Workspace.i"
 	@echo "... src/workspace/Workspace.s"

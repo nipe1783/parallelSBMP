@@ -27,7 +27,11 @@ set(SOURCE_FILES
     src/agent/Agent.cpp
     src/planners/RRT.cu
     src/planners/Planner.cu
-    src/planners/PlannerCPU.cpp
+    src/planners/Planner_CPU.cpp
+    src/collisionCheck/CollisionCheck.cpp
+    src/tree/Tree.cpp
+    src/treeNode/TreeNode.cpp
+    src/state/State.cu
     # Add other source files as needed
 )
 

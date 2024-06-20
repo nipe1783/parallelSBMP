@@ -6,9 +6,10 @@
 #include "obstacle/Obstacle.h"
 #include "workspace/Workspace.h"
 #include "agent/Agent.h"
+#include "state/State.cuh"
 
 // Global: called from the CPU to the GPU
-__global__ void generateRandomSampleKernel(Eigen::Vector2d* samples, int numSamples){
+__global__ void generateRandomSampleKernel(State* samples, int numSamples){
     int idx = threadIdx.x + blockIdx.x * blockDim.x;
     if (idx < numSamples) {
         samples[idx] = Planner::generateRandomSampleDevice();
@@ -16,13 +17,12 @@ __global__ void generateRandomSampleKernel(Eigen::Vector2d* samples, int numSamp
 }
 
 // Host function to manage GPU memory and launch kernel
-std::vector<Eigen::Vector2d> Planner::generateRandomSamples() {
-    const int numSamples = 100; // Number of samples to generate
-    Eigen::Vector2d* d_samples; // Device memory pointer (GPU)
-    std::vector<Eigen::Vector2d> h_samples(numSamples); // Host memory vector (CPU)
+std::vector<State> Planner::generateRandomSamples(const State &state, int numSamples) {
+    State* d_samples; // Device memory pointer (GPU)
+    std::vector<State> h_samples(numSamples); // Host memory vector (CPU)
 
     // Allocate device memory
-    cudaMalloc(&d_samples, numSamples * sizeof(Eigen::Vector2d)); // Allocate memory on the GPU
+    cudaMalloc(&d_samples, numSamples * sizeof(State)); // Allocate memory on the GPU
 
     // Launch kernel
     int threadsPerBlock = 256; // Number of threads per block
@@ -40,7 +40,7 @@ std::vector<Eigen::Vector2d> Planner::generateRandomSamples() {
 }
 
 // Device: called from the GPU to the GPU
-__device__ Eigen::Vector2d Planner::generateRandomSampleDevice(){
-    return Eigen::Vector2d(0, 0);
+__device__ State Planner::generateRandomSampleDevice(){
+    return State(0.0f, 0.0f);
 }
 

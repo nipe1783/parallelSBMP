@@ -14,5 +14,9 @@ class Obstacle {
 
         // fields
         std::vector<Eigen::Vector2d> verticesCCW_;
+        float x_;       // Position x
+        float y_;       // Position y
+        float length_;  // Length
+        float width_;   // Width
         
 };

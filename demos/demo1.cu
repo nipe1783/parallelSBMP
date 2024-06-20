@@ -8,28 +8,30 @@
 #include <stdio.h>
 #include <cstdio>
 #include <Eigen/Core>
-
+#include <thrust/device_vector.h>
+#include <thrust/transform.h>
+#include <thrust/functional.h>
 
 int main(void){
 
-    // Obstacle o = Obstacle();
-    // o.verticesCCW.push_back(Eigen::Vector2d(0, 0));
-    // o.verticesCCW.push_back(Eigen::Vector2d(1, 0));
-    // o.verticesCCW.push_back(Eigen::Vector2d(1, 1));
-    // o.verticesCCW.push_back(Eigen::Vector2d(0, 1));
-    // std::cout<<"TEST"<<std::endl;
-    Workspace w = Workspace(10,10);
-    Obstacle o1 = Obstacle(5,5,1);
-    Obstacle o2 = Obstacle(2,2,1);
-    Obstacle o3 = Obstacle(8,8,1);
-    w.obstacles_.push_back(o1);
-    w.obstacles_.push_back(o2);
-    w.obstacles_.push_back(o3);
+    const int N = 6;
+    int h_data[N] = {1, 2, 3, 4, 5, 6};
 
-    Agent a = Agent(1,1,.01);
+    // Transfer data to the device
+    thrust::device_vector<int> d_data(h_data, h_data + N);
 
-    RRT r = RRT();
-    r.plan(w,a,Eigen::Vector2d(9,9));
+    // Apply a transformation (multiply each element by 2)
+    thrust::transform(d_data.begin(), d_data.end(), d_data.begin(), thrust::placeholders::_1 * 2);
+
+    // Transfer data back to the host
+    thrust::copy(d_data.begin(), d_data.end(), h_data);
+
+    // Print the results
+    std::cout << "Result: ";
+    for (int i = 0; i < N; i++) {
+        std::cout << h_data[i] << " ";
+    }
+    std::cout << std::endl;
 
     printf("TEST2\n");
     return 0;
